@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script language="javascript">
+function validate()
+{
+	np=document.frm.newps.value;
+	cp=document.frm.conps.value;
+	if(np!=cp || np.length<8)
+		{
+		alert("New passwords mismatched...");
+		return false;
+		}
+	else
+		return true;
+	
+}
+</script>
+
+</head>
+<body>
+<h2>Change password Form</h2>
+<hr>
+<form name="frm" method="post" action="ChangePassword" onsubmit="return validate()">
+<table>
+<tr>
+<td>Current Password 
+<td><input type="password" name="curps" required>
+</tr>
+
+<tr>
+<td>New Password 
+<td><input type="password" name="newps">
+</tr>
+
+<tr>
+<td>Confirm Password 
+<td><input type="password" name="conps">
+</tr>
+
+<tr>
+<td><input type="submit" value="Submit"> 
+<td>
+</tr>
+
+
+</table>
+
+</form>
+</body>
+</html>
